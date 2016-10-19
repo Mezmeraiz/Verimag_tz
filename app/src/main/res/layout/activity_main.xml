@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.mezmeraiz.verimag_tz.MainActivity">
+
+    <com.mezmeraiz.verimag_tz.AnimateLayout
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="70dp"
+        android:id="@+id/animate_layout"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:background="#000">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_alignTop="@+id/animate_layout"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/press_layout"
+            android:layout_height="30dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/imageViewClose"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/close_white"
+                android:layout_marginRight="3dp" />
+
+            <TextView
+                android:text="Verimag.mp4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="24dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#fff" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/control_layout"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/imageViewPlay"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/play_white"
+                android:layout_marginRight="3dp" />
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/seekBar"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="24dp"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+
+        <VideoView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/animate_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/videoView"
+            android:layout_marginTop="30dp" />
+    </com.mezmeraiz.verimag_tz.AnimateLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:text="PLAY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/button_play"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="FULL SCREEN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_full_screen"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="MODAL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_modal"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+
+        android:id="@+id/black_layout"
+        android:layout_height="match_parent"
+        android:background="#000"
+        android:alpha="0">
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

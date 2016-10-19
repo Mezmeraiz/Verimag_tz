@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000">
+
+
+
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:id="@+id/videoViewFullSize" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_alignTop="@+id/animate_layout"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/press_layout"
+        android:layout_height="50dp">
+
+        <RelativeLayout
+            android:background="#000"
+            android:alpha="0.5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imageViewClose"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/close_white"
+            android:layout_marginRight="3dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp" />
+
+        <TextView
+            android:text="Verimag.mp4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="8dp"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/control_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_height="50dp">
+
+        <RelativeLayout
+            android:background="#000"
+            android:alpha="0.5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imageViewPlay"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/pause_white"
+            android:layout_marginRight="3dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp" />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="36dp"
+            android:layout_alignParentStart="true"
+             />
+
+    </RelativeLayout>
+</RelativeLayout>
